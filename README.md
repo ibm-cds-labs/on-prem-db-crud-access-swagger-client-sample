@@ -5,7 +5,7 @@ TODO
 
 ## Deploy to IBM Bluemix
 
-To manually deploy this application to Bluemix:
+Before you deploy this sample application, follow the instructions in the tutorial to create the _employeeTableAPI_ service and download the generated [Swagger](http://swagger.io/) JSON specification `swaggerJSON.json`.
 
     $ git clone https://github.com/ibm-cds-labs/on-prem-db-crud-access-using-swagger-client-sample.git
 
@@ -16,8 +16,6 @@ To manually deploy this application to Bluemix:
     $ cp /path/to/downloaded/swaggerJSON.json swaggerjson/swaggerJSON_employee.json
 
     $ cf push
-
-**Note:** You may notice that Bluemix assigns a URL to your application containing a random word. This is defined in the `manifest.yml` file where the `random-route` key set to the value of `true`. This ensures that multiple people deploying this application to Bluemix do not run into naming collisions. To specify your own route, remove the `random-route` line from the `manifest.yml` file and add a `host` key with the unique value you would like to use for the host name.
 
 ### Binding the sample REST API
 
@@ -34,9 +32,9 @@ The REST APIs are typically exposed to Bluemix applications using user-provided 
 
 To bind the sample REST API to the application run the following commands:
 
-    $ cf bind-service on-prem-db-crud-access-using-swagger-client-sample employeeTableAPI
+    $ cf bind-service on-prem-db-crud-access-swagger-client-sample employeeTableAPI
 
-    $ cf restage on-prem-db-crud-access-using-swagger-client-sample
+    $ cf restage on-prem-db-crud-access-swagger-client-sample
 
 
 ### Privacy Notice
