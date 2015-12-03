@@ -17,7 +17,7 @@ var express = require('express'),
     app = express();
 
 var client = require('swagger-client');
-var myjson=require('./swaggerjson/swaggerJSON_employee.json');    
+var swaggerJSON=require('./swaggerjson/swaggerJSON_employee.json');    
 
 var appEnv = require('cfenv').getAppEnv();
 
@@ -27,6 +27,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/employee', function (req, res) {
 
 	var apiName = 'employeeTableAPI';
+
 
 	// load the credentials for the API service 
 	var cacServiceCreds = appEnv.getServiceCreds( new RegExp(apiName, 'i') );
@@ -45,7 +46,7 @@ app.get('/employee', function (req, res) {
 
 		// initialize client 
 		swagger.initialize({
-				spec: myjson,
+				spec: swaggerJSON,
 				agent: false,
 				success: function() {
 					// fetch employee with the specified ID, providing the API key
