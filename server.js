@@ -55,9 +55,9 @@ app.get('/employee', function (req, res) {
 	    				                               	// return the employee information as JSON
 	    												res.json(apiResponse.obj);
 	    											  }, 
-	    											  function(error) {
+	    											  function(error) {	
 														// return the returned status and message													
-	    												res.status(error.status).send('<p>' + error.message + '</p>');
+	    												res.status(error.obj.error.status).send('<p>' + error.obj.error.message + '</p>');
 													});
 	    		}
 		});
