@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>On-premises database REST-API CRUD demo</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /> 
+
+    </head>
+    <body>
+
+    	<div class="jumbotron">
+    		<div class="container">
+    	    	<p>
+        			This sample application demonstrates REST API access to an on-premises relational database table using the Node.js <a href="https://github.com/swagger-api/swagger-js" target="_blank">swagger-client</a> library. The API was created using the Bluemix <a href="https://www.ng.bluemix.net/docs/services/ConnectandCompose/index.html" target="_blank">Connect & Compose service</a>. 
+        		</p>
+        		<p>
+        			Learn more <a href="https://github.com/ibm-cds-labs/sample-on-prem-db-crud-access-using-swagger-client"> about this application </a> or how to set up your environment.
+        		</p>
+        	</div>
+        </div>	
+    	<div class="container">
+			<div class="row">
+                <div>
+                    <p style="margin-top: 10px, margin-bottom: 10px">Enter an employee ID to retrieve the record from the on-premises DB2 database.</p>
+                </div>
+				<form class="form-inline" name="employeeIDInput" action="employee" method="get">
+		  		<div class="form-group">
+				    <label for="employeeID">Employee ID</label>
+			    	<input type="text" class="form-control" id="employeeID" name="employeeID"  placeholder="000010" required>
+		  		</div>
+		  		<button type="submit" class="btn btn-default">Fetch</button>
+				</form>
+			</div>
+		</div>
+    </body>
+</html>
