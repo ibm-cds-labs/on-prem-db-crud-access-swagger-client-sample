@@ -68,3 +68,4 @@ app.get('/employee', function (req, res) {
 
 app.listen(appEnv.port);
 
+require("cf-deployment-tracker-client").track();
