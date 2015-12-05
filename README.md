@@ -21,7 +21,7 @@ Before you deploy this sample application, follow the instructions in the tutori
 
 ### Binding the sample REST API
 
-The REST APIs are typically exposed to Bluemix applications using user-provided services, as described in the tutorial.
+The generated RESTful APIs are typically exposed to Bluemix applications using user-provided services, as described in the tutorial. Before you can use this sample application, bind the appropriate user-provided service using the Bluemix Web Console or Cloud Foundry CLI.
 
 #### Binding the published sample REST API using the Bluemix web console
   * [Log in to Bluemix](https://console.ng.bluemix.net/).
