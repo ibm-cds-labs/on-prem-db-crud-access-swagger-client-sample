@@ -33,11 +33,11 @@ app.get('/employee', function (req, res) {
 	var cacServiceCreds = appEnv.getServiceCreds( new RegExp(apiName, 'i') );
 	if (! cacServiceCreds || ! cacServiceCreds.secret_header_value) {
 		// the API for the employee table is not bound to this app; err
-		res.status(500).send('<p>The ' + apiName + ' service is not bound to this application.</p>');
+		res.status(500).send('The ' + apiName + ' service is not bound to this application.');
 	}
 	else if(! req.query.employeeID) {
 		// no employee ID was specified; err
-		res.status(400).send('<p>You must provide an employee ID.</p>');
+		res.status(400).send('You must provide an employee ID.');
 	} 
 	else {
 
@@ -54,11 +54,11 @@ app.get('/employee', function (req, res) {
 	    				                              {responseContentType: 'application/json'}, 
 	    				                              function(apiResponse) {
 	    				                               	// return the employee information as JSON
-	    												res.json(apiResponse.obj);
+	    												res.json(JSON.stringify(apiResponse.obj,'','\t'));
 	    											  }, 
 	    											  function(error) {	
 														// return the returned status and message													
-	    												res.status(error.obj.error.status).send('<p>' + error.obj.error.message + '</p>');
+	    												res.status(error.obj.error.status).send(error.obj.error.message);
 													});
 	    		}
 		});
