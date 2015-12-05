@@ -1,7 +1,7 @@
 # Simple on-premises data source REST-API sample application
 ================================================================================
 
-TODO
+You can use the Bluemix **Connect & Compose** service to create RESTful APIs for [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) database operations. This simple Node.js application illustrates how to use a Swagger client to call the API to fetch data.
 
 ## Deploy to IBM Bluemix
 
@@ -10,6 +10,8 @@ Before you deploy this sample application, follow the instructions in the tutori
     $ git clone https://github.com/ibm-cds-labs/on-prem-db-crud-access-using-swagger-client-sample.git
 
     $ cd on-prem-db-crud-access-using-swagger-client-sample
+    
+    $ npm install
 
     $ mkdir swaggerjson
     
@@ -50,7 +52,11 @@ This data is collected from the `VCAP_APPLICATION` environment variable in IBM B
 
 #### Disabling Deployment Tracking
 
-TODO
+Deployment tracking can be disabled by removing the following line from `server.js`:
+
+```
+require("cf-deployment-tracker-client").track();
+```
 
 ### License
 
