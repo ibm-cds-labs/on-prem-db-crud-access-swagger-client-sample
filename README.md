@@ -1,5 +1,6 @@
 # Simple on-premises data source REST-API sample application
-================================================================================
+
+:no_entry_sign: This project is no longer maintained
 
 You can use the Bluemix **Connect & Compose** service to create RESTful APIs for [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) database operations. This simple Node.js application illustrates how to use a Swagger client to call the API to fetch data.
 
